@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;900&display=swap');
+*{
+  margin: 0px;
+  padding: 0px;
+}
+body{
+  background: linear-gradient(to bottom, #002137, #00253e);
+  font-family: 'poppins', sans-serif;
+  color: white;
+  height: auto;
+}
+main{
+  display: flex;
+  gap: 50px;
+  width: 90%;
+  margin: auto;
+  height: 100vh;
+}
+.content{
+  overflow: auto;
+  width: auto;
+}
+.container{
+  width: 900px;
+  display: flex;
+  z-index: -50;
+  gap: 30px;
+  height: 95vh;
+  margin: auto;
+  flex: 0 0 auto;
+}
+td{
+  border: 1px solid rgb(255, 255, 255) ;
+  border-collapse: separate;
+  padding: 20px 20px 0px 20px;
+}
+table td{
+  width: 200px;
+}
+table td:empty{
+  border: none;
+}
+button{
+  border: none;
+  padding: 5px 20px;
+  border-radius: 20px;
+  background-color: #0068ad;
+  color: white;
+  margin: 0px 0px 15px 0px;
+}
+
+
+/* HEADER */
+header{
+  margin: auto 0px;
+}
+
+/* BRACKET 1 */
+.bracket1 tr td{
+  width: 200px;
+  height: 10px;
+  margin: 0px;
+}
+
+
+/* BRACKET 2 */
+.bracket2{
+  margin: auto 0px;
+}
+.bracket2 tr td{
+  width: 200px;
+  height: 100px;
+  line-height: 0px;
+}
+
+
+/* BRACKET 3 */
+.bracket3{
+  margin: auto 0px;
+}
+.bracket3 td{
+  width: 190px;
+  height: 120px;
+  line-height: 0px;
+}
+
+/* BRACKET 4 */
+.bracket4{
+  margin: auto 0px;
+}
+.bracket4 td{
+  width: 190px;
+  height: 60px;
+  line-height: 0px;
+}
+
+
+@media screen and (max-width: 920px) {
+  main{
+    flex-direction: column;
+    height: auto;
+  }
+  .container{
+    width: 1000px;
+    max-height: 1600px;
+  }
+  table td{
+    width: 1000px;
+  }
+  .content{
+    height: 90vh;
+  }
+}
