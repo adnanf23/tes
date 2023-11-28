@@ -4,105 +4,307 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
   
-  <link rel="stylesheet" href="css/index.css">
+  <!-- CSS -->
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;900&display=swap');
+    *{
+      margin: 0px;
+      padding: 0px;
+    }
+    body{
+      background: linear-gradient(to bottom, #002137, #00253e);
+      font-family: 'poppins', sans-serif;
+      color: white;
+      height: auto;
+    }
+    main{
+      display: flex;
+      gap: 50px;
+      width: 90%;
+      margin: auto;
+      height: 100vh;
+    }
+    .content{
+      overflow: auto;
+      width: auto;
+    }
+    .container{
+      width: 900px;
+      display: flex;
+      z-index: -50;
+      gap: 30px;
+      margin: auto;
+      justify-content: start;
+      align-items: center;
+      max-height: 400vh;
+      flex: 1;
+    }
+    td{
+      white-space: nowrap;
+      border: 1px solid rgb(255, 255, 255) ;
+      border-collapse: separate;
+      padding: 20px 20px 0px 20px;
+    }
+    table td{
+      width: 200px;
+    }
+    table td:empty{
+      border: none;
+    }
+    .button{
+      width: 90%;
+      margin: auto;
+      display: flex;
+      flex-direction: row;
+      gap: 20px;
+      padding: 50px 0px;
+    }
+    .button button{
+      width: 100px;
+      border: none;
+      padding: 10px;
+      border-radius: 20px;
+      background-color: #0068ad;
+      color: white;
+      font-size: 13px;
+      transition: 0.4s;
+    }
+    .button button:hover{
+      font-size: 15px;
+      color: black;
+      background-color: #8a95ff;
+    }
 
-  <title>Document</title>
+
+    header h1{
+      font-weight: 800;
+    }
+    header img{
+      margin: auto;
+    }
+
+
+
+    /* HEADER */
+    header{
+      margin: auto 0px;
+    }
+
+    /* BRACKET 1 */
+    .bracket1 tr td{
+      width: 200px;
+      height: 10px;
+      margin: 0px;
+    }
+
+
+    /* BRACKET 2 */
+    .bracket{
+      margin: auto 0px;
+    }
+    .bracket tr td{
+      width: 200px;
+      height: 20px;
+      line-height: 0px;
+    }
+
+
+
+
+    @media screen and (max-width: 920px) {
+      main{
+        flex-direction: column;
+        height: auto;
+      }
+      .container{
+        width: 1000px;
+        max-height: 1600px;
+      }
+      table td{
+        width: 1000px;
+      }
+      .content{
+        height: 90vh;
+      }
+    }
+  </style>
+
+  <title>Bracket Tournament</title>
 </head>
 <body>
 
 
   <main>
     <header>
-      <img src="https://drive.google.com/file/d/1Wje2W4oxwKhpjrWS5rVtfFjw_SWOTM78/view?usp=sharing" alt="">
+      <img src="https://drive.google.com/uc?export=view&id=1Wje2W4oxwKhpjrWS5rVtfFjw_SWOTM78" alt="" width="250px">
       <h1>TOURNAMENT <br> BRECKET</h1>
     </header>
     
     <div class="content">
       <div class="container">
   
-        <table class="bracket1">
-          <tr>
-            <td>Sq 1</td>
-          </tr>
-          <tr>
-            <td>Sq 2</td>
-          </tr>
-          <tr>
-            <td class="no-cells"></td>
-          </tr>
-          <tr>
-            <td>Sq 1</td>
-          </tr>
-          <tr>
-            <td>Sq 2</td>
-          </tr>
-          <tr>
-            <td></td>
-          </tr>
-          <tr>
-            <td>Sq 1</td>
-          </tr>
-          <tr>
-            <td>Sq 2</td>
-          </tr>
-          <tr>
-            <td></td>
-          </tr>
-          <tr>
-            <td>Sq 1</td>
-          </tr>
-          <tr>
-            <td>Sq 2</td>
-          </tr>
+        <table class="bracket1 bracket">
+          <? var tableData = getSheetData(); ?>
+          <? for (var i = 0; i < tableData.length; i++) { ?>
+            <tr>
+              <td>
+                <?= tableData[i][0] ?>
+              </td><!-- tampilkan data pada dengan nama Sheet1 colom A -->
+            </tr>
+            <tr>
+              <td>
+                <?= tableData[i][0] ?>
+              </td><!-- tampilkan data pada dengan nama Sheet1 colom A -->
+            </tr>
+            <tr>
+              <td>
+                <?= tableData[i][0] ?>
+              </td><!-- tampilkan data pada dengan nama Sheet1 colom A -->
+            </tr>
+            <tr>
+              <td>
+                <?= tableData[i][0] ?>
+              </td><!-- tampilkan data pada dengan nama Sheet1 colom A -->
+            </tr>
+            <tr>
+              <td>
+                <?= tableData[i][0] ?>
+              </td><!-- tampilkan data pada dengan nama Sheet1 colom A -->
+            </tr>
+            <tr>
+              <td>
+                <?= tableData[i][0] ?>
+              </td><!-- tampilkan data pada dengan nama Sheet1 colom A -->
+            </tr>
+            <tr>
+              <td>
+                <?= tableData[i][0] ?>
+              </td><!-- tampilkan data pada dengan nama Sheet1 colom A -->
+            </tr><tr>
+              <td>
+                <?= tableData[i][0] ?>
+              </td><!-- tampilkan data pada dengan nama Sheet1 colom A -->
+            </tr>
+            <tr>
+              <td>
+                <?= tableData[i][0] ?>
+              </td><!-- tampilkan data pada dengan nama Sheet1 colom A -->
+            </tr>
+            <tr>
+              <td>
+                <?= tableData[i][0] ?>
+              </td><!-- tampilkan data pada dengan nama Sheet1 colom A -->
+            </tr>
+            <tr>
+              <td>
+                <?= tableData[i][0] ?>
+              </td><!-- tampilkan data pada dengan nama Sheet1 colom A -->
+            </tr>
+            <tr>
+              <td>
+                <?= tableData[i][0] ?>
+              </td><!-- tampilkan data pada dengan nama Sheet1 colom A -->
+            </tr>
+            <tr>
+              <td>
+                <?= tableData[i][0] ?>
+              </td><!-- tampilkan data pada dengan nama Sheet1 colom A -->
+            </tr>
+            <? if ((i + 1) % 2 === 0) { ?>
+            <tr>
+              <td style="border: none;">
+                <div style="height: 20px;"></div>
+              </td>
+            </tr>
+          <? } ?>
+          <? } ?>
         </table>
-    
-    
-        <table class="bracket2">
+
+
+        <table class="bracket2 bracket">
+          <? var tableData = getSheetData2(); ?>
+          <? for (var i = 0; i < tableData.length; i++) { ?>
           <tr>
-            <td>Sq 1</td>
+            <td>
+              <?= tableData[i][0] ?>
+            </td><!-- tampilkan data pada dengan nama Sheet1 colom A -->
           </tr>
           <tr>
-            <td ></td>
+            <td>
+              <?= tableData[i][0] ?>
+            </td><!-- tampilkan data pada dengan nama Sheet1 colom A -->
           </tr>
           <tr>
-            <td>Sq 2</td>
+            <td>
+              <?= tableData[i][0] ?>
+            </td><!-- tampilkan data pada dengan nama Sheet1 colom A -->
           </tr>
           <tr>
-            <td></td>
+            <td>
+              <?= tableData[i][0] ?>
+            </td><!-- tampilkan data pada dengan nama Sheet1 colom A -->
           </tr>
           <tr>
-            <td>Sq 1</td>
+            <td>
+              <?= tableData[i][0] ?>
+            </td><!-- tampilkan data pada dengan nama Sheet1 colom A -->
           </tr>
           <tr>
-            <td></td>
+            <td>
+              <?= tableData[i][0] ?>
+            </td><!-- tampilkan data pada dengan nama Sheet1 colom A -->
           </tr>
           <tr>
-            <td>Sq 2</td>
+            <td>
+              <?= tableData[i][0] ?>
+            </td><!-- tampilkan data pada dengan nama Sheet1 colom A -->
           </tr>
+          <? if ((i + 1) % 2 === 0) { ?>
+          <tr>
+            <td style="border: none;">
+              <div style="height: 20px;"></div>
+            </td>
+          </tr>
+          <? } ?>
+          <? } ?>
         </table>
-    
-    
-        
-        <table class="bracket3">
-          <tr>
-            <td>Sq 1</td>
-          </tr>
-          <tr>
-            <td ></td>
-          </tr>
-          
-          <tr>
-            <td ></td>
-          </tr>
-          <tr>
-            <td>Sq 2</td>
-          </tr>
+
+
+
+        <table class="bracket3 bracket">
+          <? var tableData = getSheetData3(); ?>
+      <? for (var i = 0; i < tableData.length; i++) { ?>
+      <tr>
+        <td>
+          <?= tableData[i][0] ?>
+        </td><!-- tampilkan data pada dengan nama Sheet1 colom A -->
+      </tr>
+      <tr>
+        <td>
+          <?= tableData[i][0] ?>
+        </td><!-- tampilkan data pada dengan nama Sheet1 colom A -->
+      </tr>
+      <tr>
+        <td>
+          <?= tableData[i][0] ?>
+        </td><!-- tampilkan data pada dengan nama Sheet1 colom A -->
+      </tr>
+      <tr>
+        <td>
+          <?= tableData[i][0] ?>
+        </td><!-- tampilkan data pada dengan nama Sheet1 colom A -->
+      </tr>
+      <tr>
+      <? if ((i + 1) % 2 === 0) { ?>
+      <tr>
+        <td style="border: none;">
+          <div style="height: 20px;"></div>
+        </td>
+      </tr>
+      <? } ?>
+      <? } ?>
         </table>
-        <table class="bracket4">
-          <tr>
-            <td>Sq 1</td>
-          </tr>
-        </table>
+
     
       </div>
     </div>
